@@ -7,8 +7,11 @@
 <body>
 
 <header><!--Header-->
-    <img class="button" src="svg/menu.svg" alt="" hidden/>
-    <img style="height: 30px;" class="button" src="svg/x.svg" alt="" hidden/>
+    <div class="container" onclick="myFunction(this);">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+    </div>
     <h1 class="style">Hello World</h1>
 </header>
 <div class="menu"><!--Menu Bar-->
@@ -24,6 +27,10 @@
 <div class="Footer"><!--Footer-->
 
 </div>
-
+<script>
+    function myFunction(x) {
+        x.classList.toggle("change");
+    }
+</script>
 </body>
 </html>
