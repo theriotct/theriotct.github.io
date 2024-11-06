@@ -1,70 +1,82 @@
+/*--------------------All Screens--------------------*/
+
 .style {
     font-family: 'Courier New', Courier, monospace;
 }
-.center{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: #ff0000;
-    color: white;
-    text-align: center;
-    padding: 0 0;
-    z-index: 1000; /* Ensures the header stays on top */
-    margin-left: 0px;
-
-}
 .menu{
     position: fixed;
-    background-color: #ffd500;
-    top: 79px;
+    background-color: #404040;
+    top: 0px;
     left: 0;
     height: 40px;
     width: 100%;
-    text-align: left;
-    align-content: center;
 }
 .button{
     height: 40px;
     
 
 }
-a{
-    color: black;
-    background-color: #ffd500;
+#menuButtons{
+    color: rgb(255, 255, 255);
+    background-color: transparent;
+    text-decoration: none;
+    padding-top: 17px;
+    padding-bottom: 11px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+#menuButtons:hover{
+    background-color: #00000067;
+}
+#menuButtonsDiv{
+    float: right;
+}
+#menuTitle{
+    color: rgb(255, 255, 255);
+    background-color: transparent;
     text-decoration: none;
     padding-top: 11px;
     padding-bottom: 11px;
     padding-left: 10px;
     padding-right: 10px;
+    display: inline;
+    align-content: center;
 }
-a:hover{
-    background-color: #ceab00;
-
+#menuTitleDiv{
+    float: left;
 }
 .body{
-    margin-top: 120px;
+    margin-top: 45px;
     margin-bottom: 20px;
 }
+#sidebarButton{
+    display: none;
+}
+.footer {
+    background: #ff0000;
+    border: 1px solid;
+    color: #e6e6e6;
+    height: 50px;
+    width: 100%;
+    float: left;
+    margin: 0px 0px 0px 0px;
+}
+
+/*-------------------Small Screens-------------------*/
 @media (max-width: 768px){
     .container {
         cursor: pointer;
         float: left;
         padding-left: 10px;
-        padding-top: 20px;
+        padding-top: 0px;
     }
       
     .bar1, .bar2, .bar3 {
         width: 35px;
         height: 5px;
-        background-color: #333;
+        background-color: #ffffff;
         margin: 6px 0;
-        transition: 0.4s;
+        transition: 0s;
     }
       
     .change .bar1 {
@@ -76,24 +88,45 @@ a:hover{
     .change .bar3 {
         transform: translate(0, -11px) rotate(45deg);
     }
-}
-    /*Styles for smaller screens*/
+
     .body {
-        margin-top: 81px;
+        margin-top: 45px;
         color: blue;
     }
-    
-    .menu{
+    #menuButtons{
         display: none;
+    }
+    #menuTitleDiv{
+        
+        float: right;
+    }
+    #menuButtonsDiv{
+        display: none;
+    }
+    #menuTitle{
+        float: right;
+    }
+    #sidebarButton{
+        float: left;
+        display: unset;
     }
 
 
+}
 
+
+/*-------------------Large Screens-------------------*/
 @media (min-width: 768px){
     .menu{
         display: unset;
     }
     .body{
         color: black;
+    } 
+    #menuButtonsDiv{
+        display: unset;
+    }
+    #sidebarButton{
+        display: none;
     }
 }
