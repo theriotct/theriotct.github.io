@@ -4,27 +4,21 @@ html, body {
     padding: 0;
     box-sizing: border-box;
 }
-
 * {
     box-sizing: inherit;
 }
-
 .container {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
     margin: 0;
-    border: 1px yellow solid;
 }
-
 .content {
     flex: 1;
     margin: 0;
 }
-
 .footer {
     background: #2e1157;
-    border: 1px solid #2e1157;
     border-top: #62249E 10pt solid;
     color: #ffffff;
     height: 220px;
@@ -34,91 +28,148 @@ html, body {
     text-align: center;
     line-height: 50px;
 }
-
 p {
     padding: 0;
     margin: 0;
     line-height: 1.2;
 }
-
 a:link, a:visited {
     color: #ffffff;
     text-decoration: none;
 }
-
 .logo-link {
     display: flex;
     align-items: center;
 }
-
 .logo-link img {
     margin-right: 3px;
 }
-
 .col-left, .col-mid, .col-right {
     float: left;
     padding: 20px;
     height: 198px;
-    
 }
-
+/*----------COLUMN LEFT------------*/
 .col-left {
     text-align: left;
     width: 25%;
     font-size: 20px;
     text-wrap: nowrap;
 }
+#socialsTitle{
+    display: none;
+}
+#discord{
+    padding-top: 7px; 
+}
+#handle{
+    padding-top: 2px; 
+    padding-left: 12px;
+}
+/*----------COLUMN MIDDLE----------*/
 .col-mid {
     width: 50%;
     align-content: center;
     text-align: center;
     text-wrap: nowrap;
-    border: skyblue 2px solid;
 }
-
+.col-mid img{
+    height: 70px;
+}
+.col-mid p{
+    font-size: 20px;
+}
+/*----------COLUMN RIGHT-----------*/
 .col-right {
     width: 25%;
     font-size: 20px;
     text-align: right;
     text-wrap: nowrap;
-    border: green 2px solid;
+}
+.col-right img{
+    height: 115px;  
+    padding: 10px 0 0 64%; 
+    float: right;
+}
+.col-right p{
+    width: 100%; 
+    text-align: right; 
+    float: right; 
+    padding-right: 17px; 
 }
 /* Media Query for Mobile Devices */
 @media (max-width: 767px) {
     .footer {
         display: flex;
         flex-direction: column; /* or row depending on your layout needs */
-        height: 580px;
+        height: inherit;
     }
-    /*----------COLUMN LEFT------------*/
+    /*----------COLUMN LEFT------------Appear 2*/
     .col-left {
         order: 2; 
         width: 100%;
+        height: inherit;
+        text-align: center;
+        border-bottom: #62249E solid 5px;
     }
-
-    /*----------COLUMN MIDDLE----------*/
+    .logo-link{
+        justify-content: center;
+    }
+    #socialsTitle{
+        display: unset;
+        border-bottom: 2px rgb(255, 255, 255) solid; /* Creates a yellow border around the div */ 
+        display: inline-block; /* Keeps the div size to fit its content */ 
+        padding: 5px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    #logoInstagram {
+        display: none;
+    }
+    #logoDiscord {
+        display: none;
+    }
+    #instagram{
+        font-size: 25px;
+    }
+    #discord{
+        padding-top: 7px; 
+        font-size: 25px;
+    }
+    #handle{
+        padding-top: 2px; 
+        padding-left: 0px;
+        font-size: 25px;
+    }
+    /*----------COLUMN MIDDLE----------Appear 1*/
     .col-mid {
-        order: 1; /* Item 2 will appear first */
+        order: 1; 
         width: 100%;
+        border-bottom: #62249E solid 5px;
     }
-
-    /*----------COLUMN RIGHT-----------*/
+    .col-mid img{
+        height: 70px;
+    }
+    .col-mid p{
+        font-size: 25px;
+    }
+    /*----------COLUMN RIGHT-----------Appear 3*/
     .col-right {
         order: 3; 
         width: 100%;
+        height: inherit;
     }
-    .col-right img{
-        height: 115px;  
-        padding: 10px 0 0 8.5%; 
+    .col-right img{  
+        height: 150px;
+        width: 100%;
+        padding: 12px 0 0 0; 
         float: right;
-        border: yellow 2px solid;
     }
     .col-right p{
         width: 100%; 
-        text-align: right; 
-        float: right; 
-        padding-right: 27px; 
-        border: red 2px solid;
+        text-align: center; 
+        padding-right: 0px; 
+        font-size: 20px;
     }
     /*--------------------------------*/
 }
