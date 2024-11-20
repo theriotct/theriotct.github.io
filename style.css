@@ -73,6 +73,7 @@ a:link, a:visited {
     align-content: center;
     text-align: center;
     text-wrap: nowrap;
+    border: skyblue 2px solid;
 }
 
 .col-right {
@@ -80,24 +81,44 @@ a:link, a:visited {
     font-size: 20px;
     text-align: right;
     text-wrap: nowrap;
+    border: green 2px solid;
 }
 /* Media Query for Mobile Devices */
 @media (max-width: 767px) {
-    .container {
+    .footer {
         display: flex;
         flex-direction: column; /* or row depending on your layout needs */
+        height: 580px;
     }
-
-    /* Order items */
+    /*----------COLUMN LEFT------------*/
     .col-left {
-        order: 2; /* Item 1 will appear second */
+        order: 2; 
+        width: 100%;
     }
 
+    /*----------COLUMN MIDDLE----------*/
     .col-mid {
         order: 1; /* Item 2 will appear first */
+        width: 100%;
     }
 
+    /*----------COLUMN RIGHT-----------*/
     .col-right {
-        order: 3; /* Item 3 will appear third */
+        order: 3; 
+        width: 100%;
     }
+    .col-right img{
+        height: 115px;  
+        padding: 10px 0 0 8.5%; 
+        float: right;
+        border: yellow 2px solid;
+    }
+    .col-right p{
+        width: 100%; 
+        text-align: right; 
+        float: right; 
+        padding-right: 27px; 
+        border: red 2px solid;
+    }
+    /*--------------------------------*/
 }
