@@ -81,3 +81,23 @@ a:link, a:visited {
     text-align: right;
     text-wrap: nowrap;
 }
+/* Media Query for Mobile Devices */
+@media (max-width: 767px) {
+    .container {
+        display: flex;
+        flex-direction: column; /* or row depending on your layout needs */
+    }
+
+    /* Order items */
+    .col-left {
+        order: 2; /* Item 1 will appear second */
+    }
+
+    .col-mid {
+        order: 1; /* Item 2 will appear first */
+    }
+
+    .col-right {
+        order: 3; /* Item 3 will appear third */
+    }
+}
